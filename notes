@@ -91,6 +91,16 @@ The first set of messages coming from the device are ofc the same, but the initi
 04 20 01 00
       ^  ^- This looks like a message length byte now. Looks like it encodes the length of the packet after
       |     these first 4 bytes.
-      |- This might echo the counter from the device; not sure. Will try with that and see what happens.
+      +- This might echo the counter from the device; not sure. Will try with that and see what happens.
 
 For some reason, when I send these bytes, the controller becomes unresponsive...
+
+Other messages sent include:
+01 20 01 09 00 04 20 3a 00 00 00 83 00
+      ^  ^- Definitely message length now
+      +- Looking less like a counter now
+01 20 01 09 00 04 20 bd 00 00 00 00 00
+
+Sending these without first sending the 04 20 message doesn't seem to do anything (as somewhat expected).
+Frankly I can't seem to get ANY of these to work atm, as the first 04 02 message seems to just kill the
+controller. I wonder if there's some weird metadata thing going on :/
