@@ -1,0 +1,28 @@
+02 20 01 1c db 44 9a ad a3 46 00 00 c6 24 2a 54 01 00 01 00 17 01 02 00 01 00 01 00 01 00 01 00
+      ^- This byte starts at 01 (possibly at 00, but I haven't seen it yet) and increments each message. Overflow doesn't matter.
+
+Responding with
+04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+makes the device stop responding; no idea why yet. Must be unplugged + plugged back in to respond again.
+
+Starting to suspect the first two bytes are command bytes; the rest is [related] data.
+
+Also, 04 01 ..., 04 02 ..., 04 03 ..., stalls. Probably 04 xx ... are all the same command. Note that I haven't tested yet with any other
+data than all 00's after the first two bytes, except for echoing the first messages received with the first 3 bytes replaced with "04 00 00".
+Still stalled. Might need to try more.
+
+I fuzzed from 05 00 00 ... to 0b 00 00 ... (with all 00's after the first three bytes) and nothing changed.
+
+Sometimes echoing the original data after the first three bytes with "00 00 00" makes the device stop responding. No idea why again.
+
+Fuzzing from 00 00 00 ... to 04 00 00 ... doesn't do anything either. Gonna try to mirror with the counter byte as well now.
+
+If 08 3d ... is sent shortly after the first messages are received, the device starts responding with:
+17 01 02 00 01 00 01 00 01 00 01 00 c6 24 2a 54 01 00 01 00 17 01 02 00 01 00 01 00 01 00 01 00
+very quickly, every time! Though, if responding by more fuzzing a lot after (up to 08 75 ...), the device becomes more or less unresponsive again.
+The counter byte seems to always be 02 at this point as well.
+
+Tried to mirror everything received at this point verbatim, and accidentally sent 256 bytes every time. At this point, the device apparently reset
+or something, and started only sending 02 20 messages again, but it needed to be restarted before it started responding properly again.
+
+The same happened when responding with the correct number of bytes. Strange.
