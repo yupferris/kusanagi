@@ -2,7 +2,7 @@ extern crate libusb;
 //extern crate rand;
 
 use std::time::Duration;
-use std::thread::sleep_ms;
+//use std::thread::sleep_ms;
 
 use libusb::{Context, Device, DeviceHandle};
 //use rand::{Rng, thread_rng};
@@ -18,7 +18,7 @@ fn main() {
 
     let config = device.config_descriptor(0).unwrap();
 
-    for interface in config.interfaces() {
+    /*for interface in config.interfaces() {
         println!("Found interface: {:02x}", interface.number());
         for desc in interface.descriptors() {
             println!("  Found descriptor:");
@@ -29,7 +29,7 @@ fn main() {
                 println!("      Transfer type: {:?}", endpoint.transfer_type());
             }
         }
-    }
+    }*/
 
     if handle.kernel_driver_active(config.number()).unwrap() {
         println!("Kernel driver active");
@@ -43,15 +43,23 @@ fn main() {
 
     let timeout = Duration::from_secs(10);
 
-    let startup_message = read_buffer(&mut handle, timeout);
+    /*let startup_message = */read_buffer(&mut handle, timeout);
 
-    write_buffer(&mut handle, &[0x04, 0x20, 0x01, 0x00], timeout);
+    /*write_buffer(&mut handle, &[0x04, 0x20, 0x01, 0x00], timeout);
+    read_buffer(&mut handle, timeout);
     write_buffer(&mut handle, &[0x01, 0x20, 0x01, 0x09, 0x00, 0x04, 0x20, 0x3a, 0x00, 0x00, 0x00, 0x83, 0x00], timeout);
+    read_buffer(&mut handle, timeout);
     write_buffer(&mut handle, &[0x01, 0x20, 0x01, 0x09, 0x00, 0x04, 0x20, 0xbd, 0x00, 0x00, 0x00, 0x00, 0x00], timeout);
+    read_buffer(&mut handle, timeout);*/
 
-    loop {
+    write_buffer(&mut handle, &[0x05, 0x20, 0x02, 0x09, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x55, 0x53], timeout);
+    write_buffer(&mut handle, &[0x05, 0x20, 0x03, 0x01, 0x00], timeout);
+    write_buffer(&mut handle, &[0x0a, 0x20, 0x04, 0x03, 0x00, 0x01, 0x14], timeout);
+    read_buffer(&mut handle, timeout);
+
+    /*loop {
         read_buffer(&mut handle, timeout);
-    }
+    }*/
 
     /*loop {
         let mut write_buf = [0xff; 32];

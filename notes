@@ -102,5 +102,12 @@ Other messages sent include:
 01 20 01 09 00 04 20 bd 00 00 00 00 00
 
 Sending these without first sending the 04 20 message doesn't seem to do anything (as somewhat expected).
-Frankly I can't seem to get ANY of these to work atm, as the first 04 02 message seems to just kill the
+Frankly I can't seem to get ANY of these to work atm, as the first 04 20 message seems to just kill the
 controller. I wonder if there's some weird metadata thing going on :/
+
+A few messages later, these 3 packets are sent to the controller:
+05 20 02 09 06 00 00 00 00 00 00 55 53
+05 20 03 01 00
+0a 20 04 03 00 01 14
+
+Again, trying to send these, the controller becomes unresponsive.
