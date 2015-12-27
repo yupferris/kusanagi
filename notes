@@ -1,6 +1,44 @@
+The device has 3 interfaces:
+Found interface: 00
+  Found descriptor:
+    Endpoints (2):
+      Address: 01
+      Direction: Out
+      Transfer type: Interrupt
+      Address: 81
+      Direction: In
+      Transfer type: Interrupt
+Found interface: 01
+  Found descriptor:
+    Endpoints (0):
+  Found descriptor:
+    Endpoints (2):
+      Address: 08
+      Direction: Out
+      Transfer type: Isochronous
+      Address: 87
+      Direction: In
+      Transfer type: Isochronous
+Found interface: 02
+  Found descriptor:
+    Endpoints (0):
+  Found descriptor:
+    Endpoints (2):
+      Address: 03
+      Direction: Out
+      Transfer type: Bulk
+      Address: 83
+      Direction: In
+      Transfer type: Bulk
+
+Trying the first interface first.
+
+Initially, the device pumps these messages at a regular rate of what appears to be ~500ms:
 02 20 01 1c db 44 9a ad a3 46 00 00 c6 24 2a 54 01 00 01 00 17 01 02 00 01 00 01 00 01 00 01 00
       ^- This byte starts at 01 (possibly at 00, but I haven't seen it yet) and increments each message.
-          Overflow doesn't matter.
+          Overflow doesn't matter. All other bytes in the message are identical.
+
+First thought is to just respond with messages of the same length, but all 00's except for fuzzing the first few bytes.
 
 Responding with
 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
