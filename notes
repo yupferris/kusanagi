@@ -36,7 +36,7 @@ Trying the first interface first.
 Initially, the device pumps these messages at a regular rate of what appears to be ~500ms:
 02 20 01 1c db 44 9a ad a3 46 00 00 c6 24 2a 54 01 00 01 00 17 01 02 00 01 00 01 00 01 00 01 00
       ^- This byte starts at 01 (possibly at 00, but I haven't seen it yet) and increments each message.
-          Overflow doesn't matter. All other bytes in the message are identical.
+         Overflow doesn't matter. All other bytes in the message are identical.
 
 First thought is to just respond with messages of the same length, but all 00's except for fuzzing the first few bytes.
 
@@ -83,3 +83,14 @@ gives us back:
 ff ff ff ff ff ff ff ff ff ff ff ff c6 24 2a 54 01 00 01 00 17 01 02 00 01 00 01 00 01 00 01 00
 perhaps "ff ff" for the first two bytes is some kind of error? It also looks like only the first
 12 bytes of the messages are significant. Need to play with that.
+
+At this point, because fuzzing was taking a fair bit of time, I decided to break out a windows box and get some
+captures.
+
+The first set of messages coming from the device are ofc the same, but the initial response is simply:
+04 20 01 00
+      ^  ^- This looks like a message length byte now. Looks like it encodes the length of the packet after
+      |     these first 4 bytes.
+      |- This might echo the counter from the device; not sure. Will try with that and see what happens.
+
+For some reason, when I send these bytes, the controller becomes unresponsive...

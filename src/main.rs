@@ -45,7 +45,11 @@ fn main() {
 
     let startup_message = read_buffer(&mut handle, timeout);
 
-    loop {
+    write_buffer(&mut handle, &[0x04, 0x20, startup_message[2], 0x00], timeout);
+
+    read_buffer(&mut handle, timeout);
+
+    /*loop {
         let mut write_buf = [0xff; 32];
 
         let mut write_command = 0x083d;
@@ -58,7 +62,7 @@ fn main() {
         sleep_ms(100);
 
         read_buffer(&mut handle, timeout);
-    }
+    }*/
 
     /*let mut write_buf = [0x00; 32];
     for i in 2..32 {
@@ -101,7 +105,7 @@ fn read_buffer(handle: &mut DeviceHandle, timeout: Duration) -> [u8; 256] {
 
     let mut buf = [0; 256];
     let bytes_read = handle.read_interrupt(read_endpoint, &mut buf, timeout).unwrap();
-    print!("Bytes read    ({}): ", bytes_read);
+    print!("Bytes read    ({:02}): ", bytes_read);
     print_buf(&buf, bytes_read);
 
     buf
@@ -117,7 +121,7 @@ fn print_buf(buf: &[u8], num_bytes: usize) {
 fn write_buffer(handle: &mut DeviceHandle, buf: &[u8], timeout: Duration) {
     let write_endpoint = 0x01;
 
-    print!("Writing bytes ({}): ", buf.len());
+    print!("Writing bytes ({:02}): ", buf.len());
     print_buf(&buf, buf.len());
     handle.write_interrupt(write_endpoint, &buf, timeout).unwrap();
 }
