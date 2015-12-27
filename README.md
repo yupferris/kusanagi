@@ -1,5 +1,5 @@
 # kusanagi
-Reverse-engineering the xbox one controller USB protocol and writing a simple driver.
+Reverse-engineering the xbox one controller USB protocol and writing a simple driver for OS X.
 
 ## status
 Currently, the driver doesn't really work at all :) lots to figure out still. See `notes` for more info for now.
