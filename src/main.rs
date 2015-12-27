@@ -45,7 +45,22 @@ fn main() {
 
     let startup_message = read_buffer(&mut handle, timeout);
 
-    let mut write_buf = [0x00; 32];
+    loop {
+        let mut write_buf = [0xff; 32];
+
+        let mut write_command = 0x083d;
+        write_buf[0] = (write_command >> 8) as u8;
+        write_buf[1] = write_command as u8;
+        write_buf[2] = 0x00;
+
+        write_buffer(&mut handle, &write_buf, timeout);
+
+        sleep_ms(100);
+
+        read_buffer(&mut handle, timeout);
+    }
+
+    /*let mut write_buf = [0x00; 32];
     for i in 2..32 {
         write_buf[i] = startup_message[i];
     }
@@ -66,7 +81,7 @@ fn main() {
         write_buf[1] = 0x3d;
         write_buf[2] = 0x00;
         write_buffer(&mut handle, &write_buf, timeout);
-    }
+    }*/
 }
 
 fn find_device<'a>(context: &'a mut Context, vendor_id: u16, product_id: u16) -> Option<Device<'a>> {

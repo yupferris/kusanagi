@@ -67,3 +67,19 @@ device apparently reset or something, and started only sending 02 20 messages ag
 it started responding properly again.
 
 The same happened when responding with the correct number of bytes. Strange.
+
+After playing with this a bunch, it seems every time the device "stalls" as observed previously, waiting a bit seems to
+resolve the issue, though unplugging seems faster :D
+
+Sending
+08 3d 00 ff ff ff ff ff ff ff ff ff c6 24 2a 54 01 00 01 00 17 01 02 00 01 00 01 00 01 00 01 00
+seems to get the same input as mirroring the entire message minus the first three bytes
+
+Interestingly, sending
+08 3d ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+or
+08 3d 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+gives us back:
+ff ff ff ff ff ff ff ff ff ff ff ff c6 24 2a 54 01 00 01 00 17 01 02 00 01 00 01 00 01 00 01 00
+perhaps "ff ff" for the first two bytes is some kind of error? It also looks like only the first
+12 bytes of the messages are significant. Need to play with that.
