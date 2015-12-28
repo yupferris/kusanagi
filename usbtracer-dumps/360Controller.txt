@@ -1,0 +1,492 @@
+$ sudo ./usbtracer -i | grep Controller
+16:30:07 [5853472909][      3544 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0, (in)  bmRequestType: 0xa1, bRequest: 0x01, wValue: 0x0300, wIndex: 0x0000, wLength: 0x0008 (Undecoded Class Request)
+16:30:07 [5853472931][         0 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:07 [5853472935][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:07 [5853473049][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853473050][         1 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853473050][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x60 status 0x0
+16:30:07 [5853473281][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853473281][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853473282][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x40 status 0x0
+16:30:07 [5853473290][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853473291][         1 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853473295][         4 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 19, Endpoint: 0, (out)  length: 8, data: 0x0005000000000000 0x0000000000000000
+16:30:07 [5853473310][        15 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:07 [5853473314][         4 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x0 status 0x0
+16:30:07 [5853473377][        23 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:07 [5853473672][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0xe00002eb
+16:30:07 [5853473673][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 1, (in)  actual: 0, status: 0xe00002eb
+16:30:07 [5853473673][         0 us]    Controller::CompleteTS         (0xffffff81b9533000) completion: 0xffffff7f9c63a45e, status:  0xe00002eb
+16:30:07 [5853473691][        14 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0, (out)  bmRequestType: 0x02, bRequest: 0x01, wValue: 0x0000, wIndex: 0x0081, wLength: 0x0000 (kClearEndpointFeature)
+16:30:07 [5853473706][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:07 [5853473720][         0 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:07 [5853473834][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853473835][         1 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853473835][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x40 status 0x0
+16:30:07 [5853473838][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853473838][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853473842][         4 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:07 [5853473844][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x0 status 0x0
+16:30:07 [5853473880][        11 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:07 [5853474183][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0xe00002eb
+16:30:07 [5853474183][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 3, (in)  actual: 0, status: 0xe00002eb
+16:30:07 [5853474184][         1 us]    Controller::CompleteTS         (0xffffff81b9533000) completion: 0xffffff7f9c63a45e, status:  0xe00002eb
+16:30:07 [5853474192][         6 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0, (out)  bmRequestType: 0x02, bRequest: 0x01, wValue: 0x0000, wIndex: 0x0083, wLength: 0x0000 (kClearEndpointFeature)
+16:30:07 [5853474205][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:07 [5853474217][        12 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:07 [5853474233][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853474233][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853474233][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x40 status 0x0
+16:30:07 [5853474390][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853474391][         1 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853474407][        16 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:07 [5853474410][         3 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x0 status 0x0
+16:30:07 [5853474450][         9 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:07 [5853474732][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0xe00002eb
+16:30:07 [5853474732][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 4, (in)  actual: 0, status: 0xe00002eb
+16:30:07 [5853474733][         0 us]    Controller::CompleteTS         (0xffffff81b9533000) completion: 0xffffff7f9c63a45e, status:  0xe00002eb
+16:30:07 [5853474747][        10 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0, (out)  bmRequestType: 0x02, bRequest: 0x01, wValue: 0x0000, wIndex: 0x0084, wLength: 0x0000 (kClearEndpointFeature)
+16:30:07 [5853474779][        31 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:07 [5853474790][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:07 [5853474881][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853474881][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853474881][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x40 status 0x0
+16:30:07 [5853474885][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:07 [5853474885][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:07 [5853474923][        38 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:07 [5853474927][         4 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 0 todo 0x0 status 0x0
+16:30:07 [5853474980][         9 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:07 [5853487434][         1 us]    Controller::PowerState - GetMinimumIdlePowerState (0xffffff81b9533000) _v3ExpansionData(0xffffff803a51ee00) _MINIMUMIDLEPOWERSTATEVALID (TRUE) _MINIMUMIDLEPOWERSTATE (3)
+16:30:07 [5853509509][         1 us]    Controller::PowerState - GetMinimumIdlePowerState (0xffffff81b9533000) _v3ExpansionData(0xffffff803a51ee00) _MINIMUMIDLEPOWERSTATEVALID (TRUE) _MINIMUMIDLEPOWERSTATE (3)
+16:30:07 [5853509557][         1 us]    Controller::RootHubAbortInterruptRead (0xffffff81b9533000)
+16:30:07 [5853509557][         0 us]    Controller::RootHubStopTimer   (0xffffff81b9533000)
+16:30:07 [5853509558][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0xe00002eb
+16:30:07 [5853509559][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  actual: 0, status: 0xe00002eb
+16:30:07 [5853509561][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c6adefa, status:  0xe00002eb
+16:30:07 [5853509689][        19 us]    Controller::PowerState - powerStateWillChangeTo (0xffffff81b9533000) whatDevice 0xffffff81b9533000 myPowerState 4 (On)
+16:30:07 [5853509710][         8 us] -> Controller::PowerState         (0xffffff81b9533000) powerStateOrdinal 3 whatDevice 0xb9533000 myPowerState 4 (On)
+16:30:07 [5853509713][         3 us] -> Controller::GatedPowerChange Start (0xffffff81b9533000) powerStateOrdinal 3 _myPowerState 4
+16:30:07 [5853509754][        41 us] <- Controller::GatedPowerChange End (0xffffff81b9533000)
+16:30:07 [5853509755][         1 us] <- Controller::PowerState         (0xffffff81b9533000) myPowerState 3 (Low Power)
+16:30:07 [5853509762][         7 us]    Controller::PowerState - powerStateDidChangeTo (0xffffff81b9533000) whatDevice 0xffffff81b9533000 myPowerState 3 (Low Power)
+16:30:07 [5853509774][        12 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 3 (Low Power)
+16:30:08 [5854367463][        66 us]    Controller::PowerState - maxCapabilityForDomainState (0xffffff81b9533000) domainState 2 returning 4 (On)
+16:30:08 [5854367482][        18 us]    Controller::PowerState - powerStateWillChangeTo (0xffffff81b9533000) whatDevice 0xffffff81b9533000 myPowerState 3 (Low Power)
+16:30:08 [5854367531][        49 us] -> Controller::PowerState         (0xffffff81b9533000) powerStateOrdinal 4 whatDevice 0xb9533000 myPowerState 3 (Low Power)
+16:30:08 [5854367533][         2 us] -> Controller::GatedPowerChange Start (0xffffff81b9533000) powerStateOrdinal 4 _myPowerState 3
+16:30:08 [5854367633][       100 us] <- Controller::GatedPowerChange End (0xffffff81b9533000)
+16:30:08 [5854367633][         0 us] <- Controller::PowerState         (0xffffff81b9533000) myPowerState 4 (On)
+16:30:08 [5854367642][         9 us]    Controller::PowerState - powerStateDidChangeTo (0xffffff81b9533000) whatDevice 0xffffff81b9533000 myPowerState 4 (On)
+16:30:08 [5854367760][         7 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 128, Endpoint: 1, (in)  reqCount: 1
+16:30:08 [5854367761][         0 us] -> Controller::RHQInterruptRead Start (0xffffff81b9533000) buffer 3a628e00 bufferlength 1
+16:30:08 [5854367761][         0 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:08 [5854367806][         0 us] <- Controller::RHQInterruptRead End (0xffffff81b9533000) status 0x0 bufferlength 1
+16:30:08 [5854367806][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854367814][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  reqCount: 2
+16:30:08 [5854367814][         0 us] -> Controller::RHQInterruptRead Start (0xffffff81b9533000) buffer 3a628500 bufferlength 2
+16:30:08 [5854367814][         0 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:08 [5854367853][         0 us]    Controller::CheckForRootHubChanges (0xffffff81b9533000) calling complete, did stop RH timer: NO
+16:30:08 [5854367855][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854367855][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  actual: 0, status: 0x0
+16:30:08 [5854367856][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c6adefa, status:  0x0
+16:30:08 [5854367858][         0 us] <- Controller::RHQInterruptRead End (0xffffff81b9533000) status 0x0 bufferlength 2
+16:30:08 [5854367858][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: -559038737, noData timeout: -559038737)
+16:30:08 [5854367884][         7 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 3 myPowerState 4 (On)
+16:30:08 [5854401093][         1 us]    Controller::PowerState - GetMinimumIdlePowerState (0xffffff81b9533000) _v3ExpansionData(0xffffff803a51ee00) _MINIMUMIDLEPOWERSTATEVALID (TRUE) _MINIMUMIDLEPOWERSTATE (3)
+16:30:08 [5854401176][         1 us]    Controller::RootHubAbortInterruptRead (0xffffff81b9533000)
+16:30:08 [5854401176][         0 us]    Controller::RootHubStopTimer   (0xffffff81b9533000)
+16:30:08 [5854401178][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0xe00002eb
+16:30:08 [5854401179][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 128, Endpoint: 1, (in)  actual: 0, status: 0xe00002eb
+16:30:08 [5854401183][         4 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c6adefa, status:  0xe00002eb
+16:30:08 [5854401334][         6 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854468099][        21 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  reqCount: 2
+16:30:08 [5854468101][         1 us] -> Controller::RHQInterruptRead Start (0xffffff81b9533000) buffer 3a628500 bufferlength 2
+16:30:08 [5854468101][         0 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:08 [5854468148][         0 us] <- Controller::RHQInterruptRead End (0xffffff81b9533000) status 0x0 bufferlength 2
+16:30:08 [5854468148][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854468159][         0 us]    Controller::ProtectedDevZeroLock (0xffffff81b9533000) Trying to acquire _devZeroLock(0)
+16:30:08 [5854468160][         1 us]    Controller::ProtectedDevZeroLock (0xffffff81b9533000) _devZeroLock available without commandSleep
+16:30:08 [5854468160][         0 us]    Controller::ProtectedDevZeroLock (0xffffff81b9533000) setting _devZeroLock to true
+16:30:08 [5854468160][         0 us]    Controller::AcquireDeviceZero  (0xffffff81b9533000) ProtectedDevZeroLock(1) returned 0x0
+16:30:08 [5854523542][         1 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:08 [5854523609][        35 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854523685][         8 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 128, Endpoint: 1, (in)  reqCount: 1
+16:30:08 [5854523686][         0 us] -> Controller::RHQInterruptRead Start (0xffffff81b9533000) buffer 3a628e00 bufferlength 1
+16:30:08 [5854523686][         0 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:08 [5854523731][         0 us]    Controller::CheckForRootHubChanges (0xffffff81b9533000) calling complete, did stop RH timer: NO
+16:30:08 [5854523733][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854523733][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  actual: 0, status: 0x0
+16:30:08 [5854523734][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c6adefa, status:  0x0
+16:30:08 [5854523738][         0 us] <- Controller::RHQInterruptRead End (0xffffff81b9533000) status 0x0 bufferlength 1
+16:30:08 [5854523739][         1 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854592183][         2 us]    Controller::PowerState - GetMinimumIdlePowerState (0xffffff81b9533000) _v3ExpansionData(0xffffff803a51ee00) _MINIMUMIDLEPOWERSTATEVALID (TRUE) _MINIMUMIDLEPOWERSTATE (3)
+16:30:08 [5854592258][         0 us]    Controller::RootHubAbortInterruptRead (0xffffff81b9533000)
+16:30:08 [5854592258][         0 us]    Controller::RootHubStopTimer   (0xffffff81b9533000)
+16:30:08 [5854592260][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0xe00002eb
+16:30:08 [5854592261][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 128, Endpoint: 1, (in)  actual: 0, status: 0xe00002eb
+16:30:08 [5854592265][         4 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c6adefa, status:  0xe00002eb
+16:30:08 [5854592460][        13 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854635826][     11028 us] -> Controller::DoCreateEP Start   (0xffffff81b9533000) hub 129 port 5 transferType 0
+16:30:08 [5854635827][         0 us]    XHCI::TestConfiguredEpCount    (0xffffff81b9533000) newEpCount: 21 maxControllerEndpoint: 1024
+16:30:08 [5854635882][         0 us]    XHCI::IncConfiguredEpCount     (0xffffff81b9533000) epCount: 21 maxControllerEndpoint: 1024
+16:30:08 [5854635882][         0 us]    XHCI::IncConfiguredEpCount     (0xffffff81b9533000) epCount: 22 maxControllerEndpoint: 1024
+16:30:08 [5854635903][         1 us] <- Controller::DoCreateEP End     (0xffffff81b9533000) error 0x0
+16:30:08 [5854635918][        15 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0100, wIndex: 0x0000, wLength: 0x0008 (GET_DESCRIPTOR (Device))
+16:30:08 [5854635935][         1 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854635939][         4 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854635961][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854635961][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854635962][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854636028][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854636028][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854636029][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854636031][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854636031][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854636033][         2 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 0, Endpoint: 0, (out)  length: 8, data: 0x12010002ffffff40 0x0000000000000000
+16:30:08 [5854636040][         7 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854636041][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854636055][         7 us] -> Controller::MakeDevice Start   (0xffffff81b9533000)
+16:30:08 [5854636066][        11 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0, (out)  bmRequestType: 0x00, bRequest: 0x05, wValue: 0x0001, wIndex: 0x0000, wLength: 0x0000 (SET_ADDRESS)
+16:30:08 [5854636066][         0 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854636069][         3 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854636178][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854636188][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854636188][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854636188][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854636191][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854636191][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854636196][         5 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854636197][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 0, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854636212][         0 us] <- Controller::MakeDevice End     (0xffffff81b9533000) new device 4d4d0c00
+16:30:08 [5854636222][        10 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854638487][      2265 us]    Controller::ReleaseDeviceZero  (0xffffff81b9533000) calling DoDeleteEP _devZeroLock(1)
+16:30:08 [5854638488][         0 us]    Controller::ProtectedDevZeroLock (0xffffff81b9533000) setting _devZeroLock to false and calling commandWakeup
+16:30:08 [5854638488][         0 us]    Controller::ReleaseDeviceZero  (0xffffff81b9533000) ProtectedDevZeroLock(0) returned 0x0
+16:30:08 [5854638509][         0 us] -> Controller::DoCreateEP Start   (0xffffff81b9533000) hub 129 port 5 transferType 0
+16:30:08 [5854638549][         0 us] <- Controller::DoCreateEP End     (0xffffff81b9533000) error 0x0
+16:30:08 [5854638564][        10 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0100, wIndex: 0x0000, wLength: 0x0012 (GET_DESCRIPTOR (Device))
+16:30:08 [5854638586][         4 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854638592][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854638708][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854638709][         1 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854638709][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854638720][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854638720][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854638720][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854638731][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854638731][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854638736][         5 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 18, data: 0x12010002ffffff40 0xc6242a5401010102
+16:30:08 [5854638755][        19 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854638758][         3 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854638832][        53 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0302, wIndex: 0x0409, wLength: 0x0002 (GET_DESCRIPTOR (String))
+16:30:08 [5854638872][         3 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854638875][         1 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854638885][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854638892][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854638892][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854638892][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854638985][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854638985][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854638985][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854638993][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854638993][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854638996][         3 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 2, data: 0x2203000000000000 0x0000000000000000
+16:30:08 [5854639005][         9 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854639007][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854639037][        23 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0302, wIndex: 0x0409, wLength: 0x0022 (GET_DESCRIPTOR (String))
+16:30:08 [5854639057][         2 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639060][         3 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639065][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854639172][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639172][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639173][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854639275][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639275][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639275][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854639279][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639279][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639281][         2 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 34, data: 0x2203580062006f00 0x780020004f004e00
+16:30:08 [5854639290][         9 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854639292][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854639328][        28 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0301, wIndex: 0x0409, wLength: 0x0002 (GET_DESCRIPTOR (String))
+16:30:08 [5854639345][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854639347][         2 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639351][         4 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639432][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639432][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639433][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854639436][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639436][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639436][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854639440][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639440][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639441][         1 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 2, data: 0x0803000000000000 0x0000000000000000
+16:30:08 [5854639447][         6 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854639449][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854639466][        15 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0301, wIndex: 0x0409, wLength: 0x0008 (GET_DESCRIPTOR (String))
+16:30:08 [5854639481][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854639485][         4 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639489][         4 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639533][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639533][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639533][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854639546][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639546][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639546][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854639652][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639653][         1 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639655][         2 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 8, data: 0x0803420044004100 0x0000000000000000
+16:30:08 [5854639664][         9 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854639666][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854639694][        25 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0303, wIndex: 0x0409, wLength: 0x0002 (GET_DESCRIPTOR (String))
+16:30:08 [5854639703][         1 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639706][         0 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639712][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854639820][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639820][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639820][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854639824][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639824][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639825][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854639828][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639828][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639829][         1 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 2, data: 0x2203000000000000 0x0000000000000000
+16:30:08 [5854639835][         6 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854639837][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854639864][        14 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0303, wIndex: 0x0409, wLength: 0x0022 (GET_DESCRIPTOR (String))
+16:30:08 [5854639877][         0 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639880][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854639881][         1 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854639959][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854639959][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854639960][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854640074][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854640075][         1 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854640075][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854640078][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854640078][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854640080][         2 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 34, data: 0x2203300030003000 0x3000440042003400
+16:30:08 [5854640090][        10 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854640092][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854640129][        30 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854640196][         1 us]    Controller::PowerState - GetMinimumIdlePowerState (0xffffff81b9533000) _v3ExpansionData(0xffffff803a51ee00) _MINIMUMIDLEPOWERSTATEVALID (TRUE) _MINIMUMIDLEPOWERSTATE (3)
+16:30:08 [5854640204][         4 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  reqCount: 2
+16:30:08 [5854640205][         1 us] -> Controller::RHQInterruptRead Start (0xffffff81b9533000) buffer 3a628500 bufferlength 2
+16:30:08 [5854640205][         0 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:08 [5854640252][         0 us] <- Controller::RHQInterruptRead End (0xffffff81b9533000) status 0x0 bufferlength 2
+16:30:08 [5854640253][         1 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854644631][        16 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0200, wIndex: 0x0000, wLength: 0x0004 (GET_DESCRIPTOR (Configuration))
+16:30:08 [5854644644][         0 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854644647][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854644744][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854644744][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854644744][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854644746][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854644746][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854644746][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854644748][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854644748][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854644749][         1 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 4, data: 0x0902600000000000 0x0000000000000000
+16:30:08 [5854644756][         7 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854644758][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854644789][        19 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0200, wIndex: 0x0000, wLength: 0x0060 (GET_DESCRIPTOR (Configuration))
+16:30:08 [5854644794][         5 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854644796][         0 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854644802][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854644901][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854644901][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854644902][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854645057][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854645057][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854645057][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854645077][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854645077][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854645079][         2 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 96, data: 0x09026000030100a0 0xfa0904000002ff47
+16:30:08 [5854645087][         8 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854645088][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854645114][         3 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854645119][         5 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854645121][         2 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  bmRequestType: 0x00, bRequest: 0x09, wValue: 0x0001, wIndex: 0x0000, wLength: 0x0000 (SET_CONFIGURATION)
+16:30:08 [5854645132][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854645187][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854645188][         1 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854645188][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854645208][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854645208][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854645213][         5 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854645215][         2 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854645241][        11 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854698206][         2 us] -> Controller::DoCreateEP Start   (0xffffff81b9533000) hub 129 port 5 transferType 3
+16:30:08 [5854698208][         1 us]    XHCI::TestConfiguredEpCount    (0xffffff81b9533000) newEpCount: 23 maxControllerEndpoint: 1024
+16:30:08 [5854698209][         0 us]    XHCI::IncConfiguredEpCount     (0xffffff81b9533000) epCount: 23 maxControllerEndpoint: 1024
+16:30:08 [5854698483][         0 us] <- Controller::DoCreateEP End     (0xffffff81b9533000) error 0x0
+16:30:08 [5854698486][         0 us] -> Controller::DoCreateEP Start   (0xffffff81b9533000) hub 129 port 5 transferType 3
+16:30:08 [5854698487][         0 us]    XHCI::TestConfiguredEpCount    (0xffffff81b9533000) newEpCount: 24 maxControllerEndpoint: 1024
+16:30:08 [5854698487][         0 us]    XHCI::IncConfiguredEpCount     (0xffffff81b9533000) epCount: 24 maxControllerEndpoint: 1024
+16:30:08 [5854698737][         1 us] <- Controller::DoCreateEP End     (0xffffff81b9533000) error 0x0
+16:30:08 [5854698753][         5 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  reqCount: 64
+16:30:08 [5854698763][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854698770][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  reqCount: 4
+16:30:08 [5854698770][         0 us]    Controller::Interrupt Start Data (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  length: 4, data: 0x0420010000000000 0x0000000000000000
+16:30:08 [5854698778][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854698788][         3 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  reqCount: 13
+16:30:08 [5854698789][         1 us]    Controller::Interrupt Start Data (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  length: 13, data: 0x012001090004203a 0x0000009c00000000
+16:30:08 [5854698792][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854698797][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  reqCount: 13
+16:30:08 [5854698797][         0 us]    Controller::Interrupt Start Data (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  length: 13, data: 0x01200209000420d6 0x0000000000000000
+16:30:08 [5854698800][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854698803][         1 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  reqCount: 13
+16:30:08 [5854698803][         0 us]    Controller::Interrupt Start Data (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  length: 13, data: 0x0520020906000000 0x0000005553000000
+16:30:08 [5854698806][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854698809][         1 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  reqCount: 5
+16:30:08 [5854698810][         1 us]    Controller::Interrupt Start Data (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  length: 5, data: 0x0520030100000000 0x0000000000000000
+16:30:08 [5854698812][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854698816][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  reqCount: 7
+16:30:08 [5854698816][         0 us]    Controller::Interrupt Start Data (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  length: 7, data: 0x0a20040300011400 0x0000000000000000
+16:30:08 [5854698819][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854698823][         1 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  reqCount: 6
+16:30:08 [5854698823][         0 us]    Controller::Interrupt Start Data (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  length: 6, data: 0x0620010201000000 0x0000000000000000
+16:30:08 [5854698826][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854698917][        91 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0303, wIndex: 0x0409, wLength: 0x0002 (GET_DESCRIPTOR (String))
+16:30:08 [5854698931][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854698933][         2 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854699003][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854699003][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854699003][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854699103][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854699103][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854699103][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854699115][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854699115][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854699116][         1 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 2, data: 0x2203000000000000 0x0000000000000000
+16:30:08 [5854699122][         6 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854699123][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854699159][        13 us] -> Controller::Control Start      (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0, (in)  bmRequestType: 0x80, bRequest: 0x06, wValue: 0x0303, wIndex: 0x0409, wLength: 0x0022 (GET_DESCRIPTOR (String))
+16:30:08 [5854699172][         0 us] <- Controller::Control End        (0xffffff81b9533000) error 0x0
+16:30:08 [5854699174][         2 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854699176][         2 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854699261][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854699261][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854699261][         0 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x60 status 0x0
+16:30:08 [5854699326][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854699326][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854699327][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x40 status 0x0
+16:30:08 [5854699329][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c48033a, status:  0x0
+16:30:08 [5854699329][         0 us] -> Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 status 0x0 bufferSizeRemaining 0
+16:30:08 [5854699330][         1 us]    Controller::Packet Handler     (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 0, (out)  length: 34, data: 0x2203300030003000 0x3000440042003400
+16:30:08 [5854699336][         6 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c47f148, status:  0x0
+16:30:08 [5854699337][         1 us] <- Controller::Control PacketHandler (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 0 todo 0x0 status 0x0
+16:30:08 [5854699360][        21 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:08 [5854702345][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854702345][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  actual: 32, status: 0x0
+16:30:08 [5854702347][         2 us]    Controller::Interrupt Complete Data64 (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  length: 32, data: 0x0220011cdb449aad 0xa3460000c6242a54
+16:30:08 [5854702347][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df1429e, status:  0x0
+16:30:08 [5854702350][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  reqCount: 64
+16:30:08 [5854702359][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854702612][         3 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  reqCount: 11
+16:30:08 [5854702612][         0 us]    Controller::Interrupt Start Data (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  length: 11, data: 0x09080009000f0000 0x0000800000000000
+16:30:08 [5854702622][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854706302][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854706302][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  actual: 4, status: 0x0
+16:30:08 [5854706303][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df142c8, status:  0x0
+16:30:08 [5854710378][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854710378][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  actual: 64, status: 0x0
+16:30:08 [5854710380][         2 us]    Controller::Interrupt Complete Data64 (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  length: 64, data: 0x04f0013abd011000 0x0100000000000000
+16:30:08 [5854710380][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df1429e, status:  0x0
+16:30:08 [5854710383][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  reqCount: 64
+16:30:08 [5854710387][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854714330][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854714330][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  actual: 13, status: 0x0
+16:30:08 [5854714332][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df142c8, status:  0x0
+16:30:08 [5854718372][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854718372][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  actual: 64, status: 0x0
+16:30:08 [5854718373][         1 us]    Controller::Interrupt Complete Data64 (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  length: 64, data: 0x04a001ba003a0104 0x05060a60011a0057
+16:30:08 [5854718374][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df1429e, status:  0x0
+16:30:08 [5854718377][         3 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  reqCount: 64
+16:30:08 [5854718385][         1 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854722371][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854722371][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  actual: 64, status: 0x0
+16:30:08 [5854722372][         1 us]    Controller::Interrupt Complete Data64 (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  length: 64, data: 0x04a001ba0074e145 0xa5aba3127af197b5
+16:30:08 [5854722373][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df1429e, status:  0x0
+16:30:08 [5854722375][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  reqCount: 64
+16:30:08 [5854722382][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854726345][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854726346][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  actual: 21, status: 0x0
+16:30:08 [5854726346][         0 us]    Controller::Interrupt Complete Data64 (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  length: 21, data: 0x04b0010fae010000 0x0000000000000000
+16:30:08 [5854726347][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df1429e, status:  0x0
+16:30:08 [5854726349][         1 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  reqCount: 64
+16:30:08 [5854726357][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854730321][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854730321][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  actual: 13, status: 0x0
+16:30:08 [5854730323][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df142c8, status:  0x0
+16:30:08 [5854734317][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854734317][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  actual: 6, status: 0x0
+16:30:08 [5854734318][         1 us]    Controller::Interrupt Complete Data64 (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  length: 6, data: 0x04a00100bd010000 0x0000000000000000
+16:30:08 [5854734319][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df1429e, status:  0x0
+16:30:08 [5854734321][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  reqCount: 64
+16:30:08 [5854734329][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854738308][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854738308][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  actual: 13, status: 0x0
+16:30:08 [5854738311][         3 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df142c8, status:  0x0
+16:30:08 [5854742385][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854742386][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  actual: 5, status: 0x0
+16:30:08 [5854742388][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df142c8, status:  0x0
+16:30:08 [5854746427][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854746427][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  actual: 8, status: 0x0
+16:30:08 [5854746430][         3 us]    Controller::Interrupt Complete Data64 (0x0000000000000000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  length: 8, data: 0x0320010480000000 0x0000000000000000
+16:30:08 [5854746431][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df1429e, status:  0x0
+16:30:08 [5854746437][         4 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (in)  reqCount: 64
+16:30:08 [5854746448][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:08 [5854750350][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854750351][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  actual: 7, status: 0x0
+16:30:08 [5854750352][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df142c8, status:  0x0
+16:30:08 [5854754341][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854754342][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  actual: 6, status: 0x0
+16:30:08 [5854754344][         2 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df142c8, status:  0x0
+16:30:08 [5854758329][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:08 [5854758330][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 29, Endpoint: 1, (out)  actual: 11, status: 0x0
+16:30:08 [5854758331][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9df142c8, status:  0x0
+16:30:13 [5858948572][         1 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:13 [5858948677][        58 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)
+16:30:13 [5858948812][         8 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 128, Endpoint: 1, (in)  reqCount: 1
+16:30:13 [5858948813][         1 us] -> Controller::RHQInterruptRead Start (0xffffff81b9533000) buffer 3a628e00 bufferlength 1
+16:30:13 [5858948813][         0 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:13 [5858948858][         0 us] <- Controller::RHQInterruptRead End (0xffffff81b9533000) status 0x0 bufferlength 1
+16:30:13 [5858948859][         1 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:13 [5858976928][         1 us]    Controller::CheckForRootHubChanges (0xffffff81b9533000) calling complete, did stop RH timer: NO
+16:30:13 [5858976932][         4 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:13 [5858976934][         2 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  actual: 0, status: 0x0
+16:30:13 [5858976937][         3 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c6adefa, status:  0x0
+16:30:13 [5858988162][         1 us]    Controller::PowerState - GetMinimumIdlePowerState (0xffffff81b9533000) _v3ExpansionData(0xffffff803a51ee00) _MINIMUMIDLEPOWERSTATEVALID (TRUE) _MINIMUMIDLEPOWERSTATE (3)
+16:30:13 [5858988176][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  reqCount: 2
+16:30:13 [5858988177][         1 us] -> Controller::RHQInterruptRead Start (0xffffff81b9533000) buffer 3a628500 bufferlength 2
+16:30:13 [5858988177][         0 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:13 [5858988213][         0 us] <- Controller::RHQInterruptRead End (0xffffff81b9533000) status 0x0 bufferlength 2
+16:30:13 [5858988213][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:13 [5858988245][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 1, (in)  reqCount: 512
+16:30:13 [5858988259][         1 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:13 [5858988324][         4 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 3, (in)  reqCount: 10
+16:30:13 [5858988334][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:13 [5858988339][         2 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 4, (in)  reqCount: 4
+16:30:13 [5858988343][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:13 [5858990358][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0x0
+16:30:13 [5858990359][         1 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 3, (in)  actual: 10, status: 0x0
+16:30:13 [5858990363][         4 us]    Controller::Interrupt Complete Data64 (0x0000000000000000) Bus: 0xa, Address: 19, Endpoint: 3, (in)  length: 10, data: 0x0100003900000000 0x0000000000000000
+16:30:13 [5858990365][         2 us]    Controller::CompleteTS         (0xffffff81b9533000) completion: 0xffffff7f9c63a45e, status:  0x0
+16:30:13 [5858990443][         4 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 19, Endpoint: 3, (in)  reqCount: 10
+16:30:13 [5858990454][         1 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:13 [5859010040][         1 us]    Controller::PowerState - GetMinimumIdlePowerState (0xffffff81b9533000) _v3ExpansionData(0xffffff803a51ee00) _MINIMUMIDLEPOWERSTATEVALID (TRUE) _MINIMUMIDLEPOWERSTATE (3)
+16:30:13 [5859010067][         0 us]    Controller::RootHubAbortInterruptRead (0xffffff81b9533000)
+16:30:13 [5859010067][         0 us]    Controller::RootHubStopTimer   (0xffffff81b9533000)
+16:30:13 [5859010068][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0xe00002eb
+16:30:13 [5859010068][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 128, Endpoint: 1, (in)  actual: 0, status: 0xe00002eb
+16:30:13 [5859010069][         1 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c6adefa, status:  0xe00002eb
+16:30:13 [5859010071][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c480ce4, status:  0xe00002eb
+16:30:13 [5859010071][         0 us]    Controller::Interrupt Complete (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  actual: 0, status: 0xe00002eb
+16:30:13 [5859010071][         0 us]    Controller::Complete           (0xffffff81b9533000) completion: 0xffffff7f9c6adefa, status:  0xe00002eb
+16:30:13 [5859010076][         3 us] -> Controller::Interrupt Start    (0xffffff81b9533000) Bus: 0xa, Address: 129, Endpoint: 1, (in)  reqCount: 2
+16:30:13 [5859010076][         0 us] -> Controller::RHQInterruptRead Start (0xffffff81b9533000) buffer 3a628500 bufferlength 2
+16:30:13 [5859010076][         0 us]    Controller::RootHubStartTimer32 (0xffffff81b9533000) Polling Rate: 32
+16:30:13 [5859010111][         0 us] <- Controller::RHQInterruptRead End (0xffffff81b9533000) status 0x0 bufferlength 2
+16:30:13 [5859010111][         0 us] <- Controller::Interrupt End      (0xffffff81b9533000) error 0x0, (completion timeout: 0, noData timeout: 0)
+16:30:13 [5859010174][         4 us]    Controller::PowerState - powerChangeDone (0xffffff81b9533000) fromState 4 myPowerState 4 (On)

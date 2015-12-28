@@ -111,3 +111,15 @@ A few messages later, these 3 packets are sent to the controller:
 0a 20 04 03 00 01 14
 
 Again, trying to send these, the controller becomes unresponsive.
+
+Finally gave in at this point and started looking into the existing Xone-OSX and 360Controller drivers to
+see if I was doing anything stupid. Didn't look like it; looked like I had the first stuff right, yet the
+controller still wouldn't get past the 04 20 message. Super mad, haha. So, I decided to try and check some
+dumps from those drivers to see if anything was different under the hood. Spent many hours trying to get
+some usb dumps on os x, and finally found the usbtracer tool. Took a dump of the 360Controller driver
+talking to the controller, and one from my driver (see the usbtracer-dumps folder). They're more or less
+the same on the initial config stuff, but when the data packets the driver's concerned with start going,
+there appear to be tons of trash messages either going to or coming from the controller using this
+driver (I'm not entirely sure how to read the usbtracer dumps yet). At this point I might try to throw
+together a basic driver that just turns the controller on and nothing else without using libusb, to see
+if for some reason that's the problem.

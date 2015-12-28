@@ -43,23 +43,35 @@ fn main() {
 
     let timeout = Duration::from_secs(10);
 
-    /*let startup_message = */read_buffer(&mut handle, timeout);
+    //for _ in 0..5 {
+        let startup_message = read_buffer(&mut handle, timeout);
+    //}
 
-    /*write_buffer(&mut handle, &[0x04, 0x20, 0x01, 0x00], timeout);
-    read_buffer(&mut handle, timeout);
+    /*let mut write_buf = [0x00; 32];
+    for i in 0..32 {
+        write_buf[i] = startup_message[i];
+    }
+    write_buffer(&mut handle, &write_buf, timeout);*/
+
+    write_buffer(&mut handle, &[0x04, 0x20, 0x01, 0x00], timeout);
+    //read_buffer(&mut handle, timeout);
     write_buffer(&mut handle, &[0x01, 0x20, 0x01, 0x09, 0x00, 0x04, 0x20, 0x3a, 0x00, 0x00, 0x00, 0x83, 0x00], timeout);
-    read_buffer(&mut handle, timeout);
+    //read_buffer(&mut handle, timeout);
+    //read_buffer(&mut handle, timeout);
+    //read_buffer(&mut handle, timeout);
     write_buffer(&mut handle, &[0x01, 0x20, 0x01, 0x09, 0x00, 0x04, 0x20, 0xbd, 0x00, 0x00, 0x00, 0x00, 0x00], timeout);
-    read_buffer(&mut handle, timeout);*/
+    //read_buffer(&mut handle, timeout);
 
     write_buffer(&mut handle, &[0x05, 0x20, 0x02, 0x09, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x55, 0x53], timeout);
     write_buffer(&mut handle, &[0x05, 0x20, 0x03, 0x01, 0x00], timeout);
     write_buffer(&mut handle, &[0x0a, 0x20, 0x04, 0x03, 0x00, 0x01, 0x14], timeout);
-    read_buffer(&mut handle, timeout);
+    //read_buffer(&mut handle, timeout);
 
-    /*loop {
+    write_buffer(&mut handle, &[0x06, 0x20, 0x01, 0x02, 0x01, 0x00], timeout);
+
+    loop {
         read_buffer(&mut handle, timeout);
-    }*/
+    }
 
     /*loop {
         let mut write_buf = [0xff; 32];
@@ -133,7 +145,7 @@ fn print_buf(buf: &[u8], num_bytes: usize) {
 fn write_buffer(handle: &mut DeviceHandle, buf: &[u8], timeout: Duration) {
     let write_endpoint = 0x01;
 
-    print!("Writing bytes ({:02}): ", buf.len());
-    print_buf(&buf, buf.len());
     handle.write_interrupt(write_endpoint, &buf, timeout).unwrap();
+    print!("Bytes written ({:02}): ", buf.len());
+    print_buf(&buf, buf.len());
 }
