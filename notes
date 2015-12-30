@@ -85,7 +85,7 @@ perhaps "ff ff" for the first two bytes is some kind of error? It also looks lik
 12 bytes of the messages are significant. Need to play with that.
 
 At this point, because fuzzing was taking a fair bit of time, I decided to break out a windows box and get some
-captures.
+captures (see captures/controller-cap.pcap).
 
 The first set of messages coming from the device are ofc the same, but the initial response is simply:
 04 20 01 00
@@ -117,9 +117,9 @@ see if I was doing anything stupid. Didn't look like it; looked like I had the f
 controller still wouldn't get past the 04 20 message. Super mad, haha. So, I decided to try and check some
 dumps from those drivers to see if anything was different under the hood. Spent many hours trying to get
 some usb dumps on os x, and finally found the usbtracer tool. Took a dump of the 360Controller driver
-talking to the controller, and one from my driver (see the usbtracer-dumps folder). They're more or less
-the same on the initial config stuff, but when the data packets the driver's concerned with start going,
-there appear to be tons of trash messages either going to or coming from the controller using this
+talking to the controller, and one from my driver (see the captures/usbtracer-dumps folder). They're more
+or less the same on the initial config stuff, but when the data packets the driver's concerned with start
+going, there appear to be tons of trash messages either going to or coming from the controller using this
 driver (I'm not entirely sure how to read the usbtracer dumps yet). At this point I might try to throw
 together a basic driver that just turns the controller on and nothing else without using libusb, to see
 if for some reason that's the problem.
