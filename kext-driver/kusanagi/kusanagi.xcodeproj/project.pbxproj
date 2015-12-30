@@ -1,0 +1,271 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		500C41911C338C2800DF6F60 /* kusanagi.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 500C41901C338C2800DF6F60 /* kusanagi.hpp */; };
+		500C41931C338C2800DF6F60 /* kusanagi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 500C41921C338C2800DF6F60 /* kusanagi.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		500C418D1C338C2800DF6F60 /* kusanagi.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kusanagi.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		500C41901C338C2800DF6F60 /* kusanagi.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kusanagi.hpp; sourceTree = "<group>"; };
+		500C41921C338C2800DF6F60 /* kusanagi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kusanagi.cpp; sourceTree = "<group>"; };
+		500C41941C338C2800DF6F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		500C41891C338C2800DF6F60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		500C41831C338C2800DF6F60 = {
+			isa = PBXGroup;
+			children = (
+				500C418F1C338C2800DF6F60 /* kusanagi */,
+				500C418E1C338C2800DF6F60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		500C418E1C338C2800DF6F60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				500C418D1C338C2800DF6F60 /* kusanagi.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		500C418F1C338C2800DF6F60 /* kusanagi */ = {
+			isa = PBXGroup;
+			children = (
+				500C41901C338C2800DF6F60 /* kusanagi.hpp */,
+				500C41921C338C2800DF6F60 /* kusanagi.cpp */,
+				500C41941C338C2800DF6F60 /* Info.plist */,
+			);
+			path = kusanagi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		500C418A1C338C2800DF6F60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500C41911C338C2800DF6F60 /* kusanagi.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		500C418C1C338C2800DF6F60 /* kusanagi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 500C41971C338C2800DF6F60 /* Build configuration list for PBXNativeTarget "kusanagi" */;
+			buildPhases = (
+				500C41881C338C2800DF6F60 /* Sources */,
+				500C41891C338C2800DF6F60 /* Frameworks */,
+				500C418A1C338C2800DF6F60 /* Headers */,
+				500C418B1C338C2800DF6F60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kusanagi;
+			productName = kusanagi;
+			productReference = 500C418D1C338C2800DF6F60 /* kusanagi.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		500C41841C338C2800DF6F60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = yupferris;
+				TargetAttributes = {
+					500C418C1C338C2800DF6F60 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 500C41871C338C2800DF6F60 /* Build configuration list for PBXProject "kusanagi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 500C41831C338C2800DF6F60;
+			productRefGroup = 500C418E1C338C2800DF6F60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				500C418C1C338C2800DF6F60 /* kusanagi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		500C418B1C338C2800DF6F60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		500C41881C338C2800DF6F60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500C41931C338C2800DF6F60 /* kusanagi.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		500C41951C338C2800DF6F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		500C41961C338C2800DF6F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		500C41981C338C2800DF6F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = kusanagi/Info.plist;
+				MODULE_NAME = com.yupferris.kusanagi;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yupferris.kusanagi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		500C41991C338C2800DF6F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = kusanagi/Info.plist;
+				MODULE_NAME = com.yupferris.kusanagi;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yupferris.kusanagi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		500C41871C338C2800DF6F60 /* Build configuration list for PBXProject "kusanagi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500C41951C338C2800DF6F60 /* Debug */,
+				500C41961C338C2800DF6F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		500C41971C338C2800DF6F60 /* Build configuration list for PBXNativeTarget "kusanagi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500C41981C338C2800DF6F60 /* Debug */,
+				500C41991C338C2800DF6F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 500C41841C338C2800DF6F60 /* Project object */;
+}
