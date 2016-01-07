@@ -123,3 +123,14 @@ going, there appear to be tons of trash messages either going to or coming from 
 driver (I'm not entirely sure how to read the usbtracer dumps yet). At this point I might try to throw
 together a basic driver that just turns the controller on and nothing else without using libusb, to see
 if for some reason that's the problem.
+
+Got a basic kernel extension up and running, but it's nowhere near touching anything USB-related yet.
+
+As it turns out, writing even basic USB drivers on OS X takes LOADS of time reading LOADS of (quite bad)
+documentation about LOADS of stuff. It's taking a bit, but I'm blasting through it.
+
+Got back from vacation, and tested the libusb driver against an official xbox one controller instead of
+the third-party one I've been using. And of course, the controller powers on! Just have to change the
+vendor/product ID's and that's it. This is a tiny success, but feels awesome nonetheless. But, I really
+want to take the opportunity to learn what's going on with the third-party controller and why it doesn't
+work the same way. So, the struggle continues.
